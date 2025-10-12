@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hhome</title>
+    <link rel="stylesheet" href="style_account.css">
+</head>
+<body>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-form">
+            <h2>Регистрация</h2>
+            <div id="errorMessage" class="error-message"></div>
+            <input type="text" id="login" placeholder="Логин">
+            <input type="text" id="username" placeholder="Имя пользователя" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <input type="email" id="email" placeholder="Электронная почта">
+            <select id="role">
+                <option value="" selected disabled>Кем вы являетесь?</option>
+                <option value="">Покупатель</option>
+                <option value="">Риелтор</option>
+            </select>
+            <button onclick="login()">Зарегистрироваться</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <header class="header">
+            <div class="header__logo logo">
+                <img src="image/logo.png" alt="logo" class="logo__img">
+            </div>
+
+            <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__list list">
+                    <li class="list__item"><a href="index_menu.html">Главная</a></li>
+                    <li class="list__item"><a href="index_buy-appartment.html">Покупка</a></li>
+                    <li class="list__item"><a href="#">Аренда</a></li>
+                    <li class="list__item"><a href="index_credit.html">Ипотека</a></li>
+                    <li class="list__item"><a href="#">Риелторы</a></li>
+                    <li class="list__item"><a href="index_account.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+            <div class="header__city-selection">
+                <select>
+                    <option value="Moscow">Москва</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Kazan">Казань</option>
+                    <option value="Ekaterinburg">Екатеринбург</option>
+                    <option value="Orenburg" selected>Оренбург</option>
+                    <option value="Tomsk">Томск</option>
+                </select>
+                <p class="text-selection">Найдем недвижимость в любом городе</p>
+            </div>
+    <main>
+    <div id="accountBlock" class="block-info account">
+        <h2>Личный кабинет</h2><br><br>
+        <p class="account__name" id="userName">Пользователь</p><br><br>
+        <div class="account__buttons">
+            <button class="account__button blue" >Подробнее</button>
+            <button class="account__button black">Изменить</button>
+        </div><br><br>
+        <a href="">Избранное</a><br><br>
+        <a href="index_credit.html">Рассчитать ипотеку</a><br><br>
+        <form class="form-rielty">
+            <p>Заполните форму для связи с риелтором</p>
+            <input type="tel" placeholder="номер телефона">
+            <input type="text" placeholder="город"><br>
+            <button>Отправить</button>
+        </form><br><br>
+        <a href="">Последнее просмотренное</a><br><br>
+        <a href="">Поддержка</a><br><br>
+    </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer__logo">
+                <img src="image/logo__footer.png" alt="" class="footer__img">
+            </div>
+                <div class="footer__info">
+                <div class="footer__item">
+                    <p class="footer__contact">Контакты</p>
+                    <p class="footer__text">+7 (922) 62 77 856<br>hhome@gmail.com</p>
+                </div>
+                <div class="footer__item">
+                    <p class="footer__text dop-text">Использование сайта означает согласие с Пользовательским соглашением и Политикой обработки персональных данных</p>
+                </div>
+                <div class="footer__item dop">
+                    <p class="footer__text">Hhome - база проверенных объявлений о продаже и аренде жилой, загородной и коммерческой недвижимости.</p>
+                </div>
+                </div>
+            </div>
+    </footer>
+</main>
+<script src="script_account.js"></script>
+<script src="script_navigation.js"></script>
+</body>
+</html>

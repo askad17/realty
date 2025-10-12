@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: "Delleda Open";
+    src: url(fonts/Deledda\ Open\ Semibold.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+}
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+.list__item a:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: rgba(41, 50, 57, 1); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+.list__item a:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: rgba(41, 50, 57, 1); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+.burger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute; /* Позиционируем справа */
+            right: 15px; /* Отступ от правого края */
+            top: 20px; /* Выравнивание по вертикали */
+        }
+        
+        .burger__line {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+h2{
+    font-family: "Delleda Open", "Montserrat";
+    font-size: 64px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.list__item{
+    list-style: none;
+}
+.header__city-selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+.header__city-selection select{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(227, 236, 237, 1);
+    appearance: none;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(41, 50, 57, 1);
+    text-align: center;
+}
+option{
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: rgba(41, 50, 57, 1);
+}
+main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+p.block-info_text{
+    font-size: 26px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 200px;
+    row-gap: 50px;
+    margin: 0 auto;
+}
+.card{
+    width: 400px;
+    transition: 0.5s;
+}
+.card:hover{
+    scale: 1.05;
+}
+.slider {
+            width: 400px; /* Фиксированная ширина слайдера */
+            overflow: hidden; /* Обрезаем всё, что выходит за границы контейнера */
+            position: relative; /* Необходимо для правильного позиционирования кнопок */
+        }
+
+        /* Контейнер всех слайдов */
+        .slides {
+            display: flex; /* Размещаем слайды в одну линию */
+            transition: transform 0.5s ease-in-out; /* Анимация плавного смещения */
+        }
+
+        /* Каждый отдельный слайд */
+        .slide {
+            width: 100%;
+            max-height: 300px; /* Занимает всю ширину контейнера */
+            flex-shrink: 0; /* Запрещаем уменьшение размера слайдов */
+        }
+
+        /* Стили для изображений */
+        .slide img {
+            width: 100%; /* Картинки растягиваются на весь слайд */
+            display: block; /* Убираем пробелы вокруг изображений */
+        }
+
+        /* Кнопки «Назад» и «Вперёд» */
+        .prev, .next {
+            position: absolute; /* Позволяет располагать кнопки поверх слайдов */
+            top: 50%; /* Размещаем по вертикали по центру */
+            transform: translateY(-50%); /* Сдвигаем кнопки вверх на половину их высоты */
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон кнопок */
+            color: white; /* Белый цвет текста */
+            border: none; /* Убираем границы */
+            padding: 10px; /* Отступы внутри кнопки */
+            cursor: pointer; /* Изменяем курсор на указатель */
+            font-size: 18px; /* Размер шрифта */
+            font-weight: bold; /* Делаем текст жирным */
+            z-index: 2; /* Размещаем кнопки выше всех элементов */
+        }
+
+        /* Позиционируем кнопку «Назад» слева */
+        .prev {
+            left: 10px;
+        }
+
+        /* Позиционируем кнопку «Вперёд» справа */
+        .next {
+            right: 10px;
+        }
+
+.card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600px;
+            margin-bottom: 10px;
+        }
+
+        .card-info {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .card-price {
+            font-size: 20px;
+            font-weight: 700px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card-actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-details {
+            background-color: rgba(227, 236, 237, 1);
+            color: rgba(41, 50, 57, 1);
+            text-align: center;
+        }
+
+        .btn-details:hover {
+            background-color: #e9ecef;
+        }
+
+        .btn-favorite {
+            background-color: rgba(41, 50, 57, 1);
+            color: white;
+        }
+
+        .btn-favorite:hover {
+            background-color: #e9ecef;
+        }
+
+
+        .quarter{
+    position: relative;
+    margin: 50px 0;
+}   
+.quarter__item{
+    margin-top: 50px;
+}
+.quarter__info{
+    position: absolute;
+    top:50%;
+    left: 5%;
+    width: 50%;
+}
+.quarter__img{
+    filter: brightness(90%);
+    width: 100%;
+}
+.quarter__text{
+    font-size: 36px;
+    color: white;
+    line-height: 1.05;
+    span{
+        font-size: 64px;
+        font-weight: 600;
+    }
+}
+footer{
+    background-color: rgba(41, 50, 57, 1);
+    padding: 50px 0;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 100px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer__info{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    gap: 50px;
+}
+.dop{
+    grid-column: span 2;
+}
+.footer__contact{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.dop-text{
+    margin-top: 49px;
+}
+/*адаптивность*/
+        @media (max-width: 768px) {
+            body {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            h2 {
+                font-size: 36px;
+            }
+            .header__list {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 30px;
+                transition: left 0.3s;
+                z-index: 1000;
+            }
+            
+            .header__list.active {
+                left: 0;
+            }
+            
+            .list__item {
+                margin: 15px 0;
+            }
+            
+            .burger {
+                display: block;
+                z-index: 1001;
+            }
+            
+            /* Анимация бургера */
+            .burger.active .burger__line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .burger.active .burger__line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .burger.active .burger__line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .header__nav {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+            
+            .header__list {
+                width: max-content;
+                padding-right: 20px;
+            }
+            
+            .header__city-selection {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .cards{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .card-title {
+                font-size: 20px;
+            }
+            
+            .card-info {
+                font-size: 16px;
+            }
+            
+            .card-price {
+                font-size: 22px;
+            }
+            
+            .card-actions {
+                flex-direction: row;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            
+            .quarter__text {
+                font-size: 24px;
+            }
+            
+            .quarter__text span {
+                font-size: 36px;
+            }
+            
+            footer .container {
+                flex-direction: column;
+                gap: 30px;
+                align-items: flex-start;
+            }
+            
+            .footer__info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .dop {
+                grid-column: span 1;
+            }
+            
+            .dop-text {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 28px;
+            }
+            
+            .card {
+                width: 100%;
+            }
+            
+            .slide img {
+                height: 200px;
+                object-fit: cover;
+            }
+            
+            .quarter__text {
+                font-size: 18px;
+            }
+            
+            .quarter__text span {
+                font-size: 24px;
+            }
+            
+            .btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }

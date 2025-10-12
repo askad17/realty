@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hhome</title>
+    <link rel="stylesheet" href="style_credit.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo logo">
+                <img src="image/logo.png" alt="logo" class="logo__img">
+            </div>
+
+            <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__list list">
+                    <li class="list__item"><a href="index_menu.html">Главная</a></li>
+                    <li class="list__item"><a href="index_buy-appartment.html">Покупка</a></li>
+                    <li class="list__item"><a href="#">Аренда</a></li>
+                    <li class="list__item"><a href="index_credit.html">Ипотека</a></li>
+                    <li class="list__item"><a href="#">Риелторы</a></li>
+                    <li class="list__item"><a href="index_account.html">Личный кабинет</a></li>
+                </ul>
+        </header>
+            <div class="header__city-selection">
+                <select>
+                    <option value="Moscow">Москва</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Kazan">Казань</option>
+                    <option value="Ekaterinburg">Екатеринбург</option>
+                    <option value="Orenburg" selected>Оренбург</option>
+                    <option value="Tomsk">Томск</option>
+                </select>
+                <p class="text-selection">Найдем недвижимость в любом городе</p>
+            </div>
+    <main>
+    <div class="block-info">
+        <h2>Ипотека</h2>
+        <p class="block-info_text">
+            Купите квартиру дом или постройте свой с нуля - все доступно по низкой ставке
+        </p>
+    </div>
+    
+    <div class="calculator-container">
+        <div class="input-section">
+            <div class="form-group">
+                <label for="region">Регион покупки</label>
+                <select id="region">
+                    <option value="">Выберите регион</option>
+                    <option value="moscow">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="other">Другие регионы</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="income">Ваш заработок (в месяц)</label>
+                <input type="number" id="income" placeholder="Введите ваш доход">
+            </div>
+            
+            <div class="form-group">
+                <label for="property-price">Стоимость недвижимости</label>
+                <input type="number" id="property-price" placeholder="Введите стоимость">
+            </div>
+            
+            <div class="form-group">
+                <label for="down-payment">Первоначальный взнос</label>
+                <input type="number" id="down-payment" placeholder="Введите сумму взноса">
+            </div>
+            
+            <button class="btn btn-block" id="calculate-btn">Рассчитать ипотеку</button>
+            <button class="btn btn-block btn-apply">Оформить заявку</button>
+        </div>
+        
+        <div class="result-section">
+            <div class="result-item">
+                <div class="result-label">Процентная ставка</div>
+                <div class="result-value" id="interest-rate">29%</div>
+            </div>
+            
+            <div class="result-item">
+                <div class="result-label">Ежемесячный платеж</div>
+                <div class="result-value" id="monthly-payment">50 700 ₽</div>
+            </div>
+            
+            <div class="result-item">
+                <div class="result-label">Сумма кредита</div>
+                <div class="result-value" id="loan-amount">8 200 000 ₽</div>
+            </div>    
+        </div>
+    </div>
+
+
+    <div class="faq-container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">Необходимые документы</div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Для оформления кредита вам потребуются:</p>
+                    <ul class="accordion-list">
+                        <li class="accordion-li">Паспорт гражданина РФ</li>
+                        <li class="accordion-li">Спрпавка о доходах</li>
+                        <li class="accordion-li">Копия трудовой книжки</li>
+                        <li class="accordion-li">Документы на залоговое имущество</li>
+                        <li class="accordion-li">СНИЛС</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Условия кредитования</div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Основные условия кредитования</p>
+                    <ul class="accordion-list">
+                        <li class="accordion-li">Сумма кредита: от 2 000 000 до 20 000 000</li>
+                        <li class="accordion-li">Срок крелита: от 1 года до 15 лет</li>
+                        <li class="accordion-li">Процентная ставка: от 9,9% годовых</li>
+                        <li class="accordion-li">Возраст заемщика: от 21 года до 65 лет</li>
+                        <li class="accordion-li">Требуемый стаж работы: не менее 3 месяцев на текущем месте</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Требования к заемщикам</div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Основные требования к заемщикам</p>
+                    <ul class="accordion-list">
+                        <li class="accordion-li">Гражданство РФ</li>
+                        <li class="accordion-li">Постоянная регистрация на территории РФ</li>
+                        <li class="accordion-li">Возраст от 21 года на момент получения кредита</li>
+                        <li class="accordion-li">Наличие постоянного источника дохода</li>
+                        <li class="accordion-li">Положительная кредитная история</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">Подача заявки</div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Подача заявки</p>
+                    <ul class="accordion-list">
+                        <li class="accordion-li">Онлайн</li>
+                        <li class="accordion-li">В отделении банка</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer__logo">
+                <img src="image/logo__footer.png" alt="" class="footer__img">
+            </div>
+                <div class="footer__info">
+                <div class="footer__item">
+                    <p class="footer__contact">Контакты</p>
+                    <p class="footer__text">+7 (922) 62 77 856<br>hhome@gmail.com</p>
+                </div>
+                <div class="footer__item">
+                    <p class="footer__text dop-text">Использование сайта означает согласие с Пользовательским соглашением и Политикой обработки персональных данных</p>
+                </div>
+                <div class="footer__item dop">
+                    <p class="footer__text">Hhome - база проверенных объявлений о продаже и аренде жилой, загородной и коммерческой недвижимости.</p>
+                </div>
+                </div>
+            </div>
+    </footer>
+</main>
+<script src="script_credit.js"></script>
+<script src="script_navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hhome</title>
+    <link rel="stylesheet" href="style_menu.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo logo">
+                <img src="image/logo.png" alt="logo" class="logo__img">
+            </div>
+
+            <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
+
+
+            <nav class="header__nav">
+                <ul class="header__list list">
+                    <li class="list__item"><a href="index_menu.html">Главная</a></li>
+                    <li class="list__item"><a href="index_buy-appartment.html">Покупка</a></li>
+                    <li class="list__item"><a href="#">Аренда</a></li>
+                    <li class="list__item"><a href="index_credit.html">Ипотека</a></li>
+                    <li class="list__item"><a href="#">Риелторы</a></li>
+                    <li class="list__item"><a href="index_account.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </header>
+            <div class="header__city-selection">
+                <select>
+                    <option value="Moscow">Москва</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Kazan">Казань</option>
+                    <option value="Ekaterinburg">Екатеринбург</option>
+                    <option value="Orenburg" selected>Оренбург</option>
+                    <option value="Tomsk">Томск</option>
+                </select>
+                <p class="text-selection">Найдем недвижимость в любом городе</p>
+            </div>
+    </div>
+    <main>
+    <div class="preview">
+        <img src="image/main_preview.png" alt="" class="preview__img">
+        <div class="preview__info info">
+        <h3 class="info__text">ВАША НЕДВИЖИМОСТЬ У НАС</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="service-selection">
+            <a href="index_credit.html"><div class="service-selection__item">
+                <p class="service-selection__text">Ипотека</p>
+            </div></a>
+            <a href=""><div class="service-selection__item">
+                <p class="service-selection__text">Районы</p>
+            </div></a>
+            <a href=""><div class="service-selection__item">
+                <p class="service-selection__text">Услуги</p>
+            </div></a>
+        </div>
+        <div class="room-selection">
+            <div class="room-selection_block">
+                        <img src="image/main_house.png" alt="" class="room-selection__img">
+                        <button class="room-selection__button">Подробнее</button>
+                    </div>
+            <div class="labels">
+            <label for="tabone"><img src="image/main_homes.png" alt="" class="room-selection__item-img">Дома</label>
+            <label for="tabtwo"><img src="image/main_apartment.png" alt="" class="room-selection__item-img">Квартиры</label>
+            <label for="tabthree"><img src="image/main_plot.png" alt="" class="room-selection__item-img">Земельные участки</label>
+            </div>
+        </div>
+        <div class="quarter">
+            <h2>Кварталы</h2>
+            <div class="quarter__item">
+                    <img src="image/residential_complex.png" alt="" class="quarter__img">
+                    <div class="quarter__info"><p class="quarter__text"><span>ЖК "Идеальный"</span><br>Квартиры с ремонтом и без</p>
+                    </div>
+            </div>
+        </div>
+        <div class="expert">
+            <h2>Специалисты</h2>
+            <div class="expert__container">
+                <div class="expert__item">
+                    <p class="expert__text"><span>Юрий Афанасьев</span><br>6 предложений</p>
+                    <button class="expert__button">Рассмотреть</button>
+                </div>
+                <div class="expert__item">
+                    <p class="expert__text"><span>Иван Иванов</span><br>2 предложения</p>
+                    <button class="expert__button">Рассмотреть</button>
+                </div>
+                <div class="expert__item">
+                    <p class="expert__text"><span>Юлия Смирнова</span><br>7 предложений</p>
+                    <button class="expert__button">Рассмотреть</button>
+                </div>
+            </div>
+        </div>
+        <p class="text">Выбирайте качественный сервис для поиска недвижимости</p>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer__logo">
+                <img src="image/logo__footer.png" alt="" class="footer__img">
+            </div>
+                <div class="footer__info">
+                <div class="footer__item">
+                    <p class="footer__contact">Контакты</p>
+                    <p class="footer__text">+7 (922) 62 77 856<br>hhome@gmail.com</p>
+                </div>
+                <div class="footer__item">
+                    <p class="footer__text dop-text">Использование сайта означает согласие с Пользовательским соглашением и Политикой обработки персональных данных</p>
+                </div>
+                <div class="footer__item dop">
+                    <p class="footer__text">Hhome - база проверенных объявлений о продаже и аренде жилой, загородной и коммерческой недвижимости.</p>
+                </div>
+                </div>
+            </div>
+    </footer>
+</main>
+<script src="script_navigation.js"></script>
+</body>
+</html>

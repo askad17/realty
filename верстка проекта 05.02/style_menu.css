@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: "Delleda Open";
+    src: url(fonts/Deledda\ Open\ Semibold.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+}
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+.list__item a:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px; /* Высота линии */
+    background-color: rgba(41, 50, 57, 1); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+.list__item a:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; /* Высота линии */
+    background-color: rgba(41, 50, 57, 1); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+.burger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute; /* Позиционируем справа */
+            right: 15px; /* Отступ от правого края */
+            top: 20px; /* Выравнивание по вертикали */
+        }
+        
+        .burger__line {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+
+h2{
+    font-family: "Delleda Open", "Montserrat";
+    font-size: 64px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.list__item{
+    list-style: none;
+}
+.header__city-selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+select{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(227, 236, 237, 1);
+    appearance: none;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(41, 50, 57, 1);
+    text-align: center;
+}
+option{
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: rgba(41, 50, 57, 1);
+}
+main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.preview{
+    position: relative;
+}
+.preview__img{
+    width: 100%;
+}
+.preview__info{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 50%;
+}
+h3{
+    font-family: "Delleda Open", "Montserrat";
+    font-size: 80px;
+    color: white;
+    line-height: 1.2;
+}
+.service-selection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.service-selection__item{
+    background-color: rgba(227, 236, 237, 1);
+    font-size: 45px;
+    font-weight: 500;
+    padding: 40px 50px;
+    border-radius: 15px;
+    transition: .4s;
+}
+.service-selection__item:hover {
+    background-color: rgba(41, 50, 57, 1);
+    color: white;
+}
+.service-selection__item:active{
+    background-color: rgba(41, 50, 57, 0.814);
+}
+
+.room-selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    text-align: right;
+    padding: 10px 10px;
+    margin: 0 7px 20px 0;
+    cursor: pointer;
+    background-color: rgba(41, 50, 57, 1);
+    border-radius: 15px;
+    font-size: 36px;
+    color: white;
+    transition: background ease .4s;
+}
+label:hover{
+    background-color: rgba(227, 236, 237, 1);
+    color: black;
+}
+
+.room-selection_block{
+    position: relative;
+}
+.room-selection__button{
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    background-color: rgba(41, 50, 57, 1);
+    color: white;
+    font-size: 20px;
+    padding: 12px 70px;
+    border: none;
+    border-radius: 5px;
+    transition: .4s;
+}
+.room-selection__button:hover{
+    background-color: rgba(227, 236, 237, 1);
+    color: rgba(41, 50, 57, 1);
+}
+
+.quarter{
+    position: relative;
+    margin: 50px 0;
+}   
+.quarter__item{
+    margin-top: 50px;
+}
+.quarter__info{
+    position: absolute;
+    top:50%;
+    left: 5%;
+    width: 50%;
+}
+.quarter__img{
+    filter: brightness(90%);
+    width: 100%;
+}
+.quarter__text{
+    font-size: 36px;
+    color: white;
+    line-height: 1.05;
+    span{
+        font-size: 64px;
+        font-weight: 600;
+    }
+}
+
+
+
+.expert__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.expert__text{
+    font-size: 30px;
+    line-height: 1.5;
+    span{
+        font-size: 34px;
+        font-weight: 500;
+    }
+}
+.expert__button{
+    background-color: rgba(210, 229, 233, 1);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    margin-top: 30px;
+    transition: .4s;
+}
+.expert__button:hover{
+    background-color: rgba(41, 50, 57, 1);
+    color: white;
+    scale: 1.02;
+}
+.expert__button:active{
+    background-color: rgba(41, 50, 57, 0.814);
+    scale: 1;
+}
+.text{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 100px 0;
+}
+footer{
+    background-color: rgba(41, 50, 57, 1);
+    padding: 50px 0;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    gap: 100px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer__info{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    gap: 50px;
+}
+.dop{
+    grid-column: span 2;
+}
+.footer__contact{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.dop-text{
+    margin-top: 49px;
+}
+/*адаптивность*/
+        @media (max-width: 768px) {
+            body {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            h2 {
+                font-size: 36px;
+            }
+            
+            h3 {
+                font-size: 40px;
+                line-height: 1.1;
+            }
+            .header__list {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 30px;
+                transition: left 0.3s;
+                z-index: 1000;
+            }
+            
+            .header__list.active {
+                left: 0;
+            }
+            
+            .list__item {
+                margin: 15px 0;
+            }
+            
+            .burger {
+                display: block;
+                z-index: 1001;
+            }
+            
+            /* Анимация бургера */
+            .burger.active .burger__line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .burger.active .burger__line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .burger.active .burger__line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
+            
+            .preview__info {
+                top: 15%;
+                width: 80%;
+            }
+            
+            .room-selection {
+                flex-direction: column;
+            }
+            
+            .labels {
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                gap: 10px;
+            }
+            
+            label {
+                width: 100%;
+                font-size: 24px;
+                padding: 8px 15px;
+                margin: 0 0 10px 0;
+            }
+.service-selection{
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+.room-selection_block{
+    text-align: center;
+}
+            .room-selection__button {
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 40px;
+            }
+            
+            .quarter__info {
+                top: 30%;
+                width: 80%;
+            }
+            
+            .quarter__text {
+                font-size: 24px;
+            }
+            
+            .quarter__text span {
+                font-size: 36px;
+            }
+            
+            .expert__container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .expert__text {
+                font-size: 24px;
+            }
+            
+            .expert__text span {
+                font-size: 28px;
+            }
+            
+            .text {
+                font-size: 24px;
+                margin: 50px 0;
+            }
+            
+            footer .container {
+                flex-direction: column;
+                gap: 30px;
+                align-items: flex-start;
+            }
+            
+            .footer__info {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .dop {
+                grid-column: span 1;
+            }
+            
+            .dop-text {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 28px;
+            }
+            
+            h3 {
+                font-size: 32px;
+                top: 10%;
+            }
+            .service-selection{
+    flex-direction: column;
+}
+.room-selection_block{
+    text-align: center;
+}
+.room-selection__img{
+    width: 100%;
+}
+            .service-selection__item {
+                font-size: 24px;
+                padding: 15px 20px;
+                width: 100%;
+            }
+            
+            .quarter__info {
+                top: 60%;
+            }
+            
+            .quarter__text {
+                font-size: 18px;
+            }
+            
+            .quarter__text span {
+                font-size: 24px;
+            }
+            
+            .expert__text {
+                font-size: 20px;
+            }
+            
+            .expert__text span {
+                font-size: 22px;
+            }
+            
+            .text {
+                font-size: 18px;
+            }
+        }
